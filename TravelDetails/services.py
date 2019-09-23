@@ -3,7 +3,7 @@ from Utility.Graph import Graph
 from django.conf import settings
 
 
-# @memoize(timeout=settings.FETCH_PLANS_CACHE_TTL)
+@memoize(timeout=settings.FETCH_PLANS_CACHE_TTL)
 def determine_fastest_route(input_data):
     preferred_time = input_data["prefered_time"]
     start_city = input_data["trip_plan"]["start_city"]

@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'pyf4k%1)b6zpzl!j_c&y0i1712vgnt1n@-#oi3^7m9p6$_1e=q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.environ.get('DEBUG'))
 
 ALLOWED_HOSTS = ['*']
 
@@ -118,7 +118,7 @@ FETCH_PLANS_CACHE_TTL = 10 #int(os.environ.get('FETCH_PLANS_CACHE_TTL'))
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.environ.get('REDIS_URL'),
+        "LOCATION": os.environ.get('REDIS_HOST'),
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "SERIALIZER": "django_redis.serializers.json.JSONSerializer",
