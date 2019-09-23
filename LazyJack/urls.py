@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from TravelDetails.views import fastest_travel_time
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('lazy_jack/', fastest_travel_time)
 ]
