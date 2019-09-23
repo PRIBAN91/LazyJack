@@ -113,12 +113,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-FETCH_PLANS_CACHE_TTL = 10 #int(os.environ.get('FETCH_PLANS_CACHE_TTL'))
+FETCH_PLANS_CACHE_TTL = 10  # int(os.environ.get('FETCH_PLANS_CACHE_TTL'))
 
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.environ.get('REDIS_HOST'),
+        "LOCATION": os.environ.get('REDIS_URL'),
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "SERIALIZER": "django_redis.serializers.json.JSONSerializer",
