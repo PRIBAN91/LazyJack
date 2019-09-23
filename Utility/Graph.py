@@ -2,16 +2,15 @@ import sys
 
 
 class Graph:
-
     def __init__(self, vertices, graph):
         self.V = vertices
         self.graph = graph
 
     def minDistance(self, dist, path):
-        min = min_index = sys.maxsize
+        mini = min_index = sys.maxsize
         for v in range(self.V):
-            if dist[v] < min and not path[v]:
-                min = dist[v]
+            if dist[v] < mini and not path[v]:
+                mini = dist[v]
                 min_index = v
         return min_index
 
