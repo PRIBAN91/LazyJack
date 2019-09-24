@@ -22,7 +22,6 @@ def create_route_dict(schedules, preferred_time):
 
 
 def find_fastest_route(departure_city, arrival_city, departure_timestamp, route_dict, visited_cities, route_history):
-    print("In fastest route")
     route_key = (departure_city, arrival_city, departure_timestamp)
     if route_key in route_history:
         return route_history[route_key]
