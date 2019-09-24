@@ -122,8 +122,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "LazyJack/static"),
 ]
 
-FETCH_PLANS_CACHE_TTL = int(os.environ.get('CACHE_TTL'))
-
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
