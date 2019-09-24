@@ -1,1 +1,1 @@
-web: gunicorn MovieBuff.wsgi
+web: gunicorn LazyJack.wsgi
