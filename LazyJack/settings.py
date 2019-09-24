@@ -122,7 +122,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "LazyJack/static"),
 ]
 
-FETCH_PLANS_CACHE_TTL = 10  # int(os.environ.get('FETCH_PLANS_CACHE_TTL'))
+FETCH_PLANS_CACHE_TTL = int(os.environ.get('CACHE_TTL'))
 
 CACHES = {
     "default": {
