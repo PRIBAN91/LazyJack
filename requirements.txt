@@ -9,7 +9,7 @@ django-compat==1.0.15
 django-cors-headers==2.4.0
 django-filter==2.1.0
 django-redis==4.10.0
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 mysqlclient==1.4.1
 pyjwt==1.7.1
 python-crontab==2.3.6
