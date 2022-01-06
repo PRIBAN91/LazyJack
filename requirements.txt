@@ -1,6 +1,6 @@
 amqp==2.5.0
 Babel==2.6.0
-celery==4.3.0
+celery==5.2.2
 certifi==2019.3.9
 Django==2.1.11
 django-celery-beat==1.4.0
